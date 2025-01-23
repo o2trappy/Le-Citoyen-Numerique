@@ -1,8 +1,8 @@
 // Données d'exemple pour les épisodes
 const episodes = [
-  { titre: "Épisode 1: Introduction", fichier: "episodes/episode1.m4a" },
-  { titre: "Épisode 2: Les bases", fichier: "episodes/episode2.m4a" },
-  { titre: "Épisode 3: Techniques avancées", fichier: "episodes/episode3.m4a" },
+  { titre: "Épisode 1: Introduction", fichier: "episodes/episode1.mp3" },
+  { titre: "Épisode 2: Les bases", fichier: "episodes/episode2.mp3" },
+  { titre: "Épisode 3: Techniques avancées", fichier: "episodes/episode3.mp3" },
 ]
 
 // Fonction pour afficher les épisodes
