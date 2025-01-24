@@ -5,6 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Citoyen Numérique</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            padding-bottom: 80px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 3px solid #ffcc00;
+        }
+
+        header nav {
+            margin-top: 10px;
+            border-top: 2px solid #ffcc00;
+            padding-top: 10px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        header nav a:hover {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+        .section h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .episode {
+            margin-bottom: 20px;
+        }
+
+        .episode h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .episode audio {
+            width: 100%;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .controls input[type="range"] {
+            width: 60%;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 3px solid #ffcc00;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .section {
+                padding: 15px;
+            }
+
+            footer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -12,7 +129,7 @@
         <nav>
             <a href="#about">À propos</a>
             <a href="#listen">Épisodes</a>
-            <a href="#tips">Conseils et Infos</a>
+            <a href="#tips">Conseils</a>
         </nav>
     </header>
 
@@ -20,9 +137,9 @@
         <!-- About Section -->
         <section id="about" class="section">
             <h2>À propos de nous</h2>
-            <p><strong>Oliver England</strong> : spécialiste des médias numériques, passionné par les technologies et les plateformes en ligne. Je m'efforce de sensibiliser les jeunes adultes aux dangers et opportunités du numérique.</p>
-            <p><strong>Cohen Font</strong> : experte en sécurité en ligne, spécialisée dans la protection des données et les bonnes pratiques numériques. Avec une expertise en cybersécurité, elle aide à protéger les utilisateurs contre les menaces du web.</p>
-            <p>Bienvenue dans "Le Citoyen Numérique", un podcast dédié à la littératie numérique et à la sécurité en ligne. Nous voulons aider les jeunes adultes (13-25 ans) à naviguer en toute sécurité dans un monde où l'on passe de plus en plus de temps en ligne. Nous sommes une génération connectée, mais cette hyperconnexion présente aussi de nombreux dangers. Notre mission est de vous fournir des conseils pratiques pour éviter les pièges et rendre Internet plus sûr pour vous.</p>
+            <p><strong>Oliver England</strong> : spécialiste des médias numériques, passionné par les technologies et les plateformes en ligne.</p>
+            <p><strong>Cohen Font</strong> : experte en sécurité en ligne, spécialisée dans la protection des données et les bonnes pratiques numériques.</p>
+            <p>Nous sommes deux jeunes passionnés de l'ère numérique, et notre mission est d'aider à rendre Internet plus sûr pour les jeunes de 13 à 25 ans. En partageant des conseils sur la sécurité en ligne et la gestion des dangers, nous espérons vous aider à naviguer sur Internet en toute confiance.</p>
         </section>
 
         <!-- Episodes Section -->
@@ -31,66 +148,57 @@
             <div class="episode">
                 <h3>Épisode 1 : Les médias numériques sont en réseau</h3>
                 <audio controls>
-                    <source src="episode1.mp3" type="audio/mp3">
+                    <source src="audio/episode1.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
             </div>
             <div class="episode">
                 <h3>Épisode 2 : Les médias numériques ont des auditoires imprévus</h3>
                 <audio controls>
-                    <source src="episode2.mp3" type="audio/mp3">
+                    <source src="audio/episode2.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
             </div>
             <div class="episode">
                 <h3>Épisode 3 : Nos interactions numériques peuvent avoir un réel impact</h3>
                 <audio controls>
-                    <source src="episode3.mp3" type="audio/mp3">
+                    <source src="audio/episode3.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
             </div>
             <div class="episode">
                 <h3>Épisode 4 : Les médias numériques sont partageables et continus</h3>
                 <audio controls>
-                    <source src="episode4.mp3" type="audio/mp3">
+                    <source src="audio/episode4.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
             </div>
             <div class="episode">
                 <h3>Épisode 5 : Les Arnaques Crypto et Comment les Combattre</h3>
                 <audio controls>
-                    <source src="episode5.mp3" type="audio/mp3">
+                    <source src="audio/episode5.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
             </div>
         </section>
 
-        <!-- Tips and Info Section -->
+        <!-- Tips Section -->
         <section id="tips" class="section">
             <h2>Conseils et Informations</h2>
-            <p><strong>Les cinq concepts clés :</strong></p>
+            <p>Notre mission est de rendre Internet plus sûr pour vous. Voici quelques conseils essentiels :</p>
             <ul>
-                <li>Les médias numériques sont en réseau.</li>
-                <li>Les médias numériques ont des auditoires imprévus.</li>
-                <li>Nos interactions dans les médias numériques peuvent avoir un réel impact sur les autres.</li>
-                <li>Les médias numériques sont partageables et continus.</li>
-                <li>Notre expérience des médias est façonnée par les outils dont nous nous servons.</li>
-            </ul>
-            <p>Quelques conseils pour rester en sécurité en ligne :</p>
-            <ul>
-                <li>Vérifiez vos paramètres de confidentialité régulièrement.</li>
-                <li>Évitez de partager des informations personnelles sensibles.</li>
-                <li>Réfléchissez avant de publier : est-ce que cela pourrait être mal interprété ?</li>
-                <li>Protégez vos mots de passe et utilisez une authentification à deux facteurs.</li>
-                <li>Méfiez-vous des emails ou messages suspects qui demandent des informations confidentielles.</li>
+                <li>Vérifiez régulièrement vos paramètres de confidentialité.</li>
+                <li>Ne partagez pas d’informations personnelles sensibles.</li>
+                <li>Pensez avant de publier quelque chose en ligne.</li>
+                <li>Utilisez des mots de passe sécurisés et activez l’authentification à deux facteurs.</li>
+                <li>Méfiez-vous des arnaques en ligne, notamment les escroqueries liées aux crypto-monnaies.</li>
             </ul>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 Le Citoyen Numérique | Tous droits réservés</p>
+        <p>&copy; 2025 Le Citoyen Numérique - Tous droits réservés</p>
+        <a href="mailto:contact@lecitoyennumerique.com">Contactez-nous</a>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
