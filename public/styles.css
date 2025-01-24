@@ -1,22 +1,26 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f9f9f9;
   color: #333;
   padding-bottom: 80px; /* Ensure content doesn't overlap the footer */
+  background: linear-gradient(to right, #74ebd5, #9face6); /* Soft gradient background */
 }
 
 /* Root Variables for Colors */
 :root {
-  --main-bg-color: #f4f4f4;
-  --header-bg-color: #333;
+  --main-bg-color: #f9f9f9;
+  --header-bg-color: #2b2b2b;
   --text-color: #333;
   --highlight-color: #ffcc00;
   --card-bg-color: #fff;
-  --footer-bg-color: #333;
+  --footer-bg-color: #2b2b2b;
+  --hover-color: #ff9900;
+  --link-hover-color: #00bcd4;
+  --button-bg-color: #007bff;
 }
 
 /* Header */
@@ -24,16 +28,25 @@ header {
   background-color: var(--header-bg-color);
   color: #fff;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+header:hover {
+  background-color: var(--hover-color);
 }
 
 header a {
   color: #fff;
   text-decoration: none;
+  font-size: 18px;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
 }
 
 header a:hover {
-  color: var(--highlight-color);
+  color: var(--link-hover-color);
   text-decoration: underline;
 }
 
@@ -43,8 +56,9 @@ nav ul {
   justify-content: center;
   list-style: none;
   padding: 0;
-  background-color: #444;
+  background-color: var(--header-bg-color);
   margin: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul li {
@@ -55,54 +69,70 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  padding: 0.5rem 0;
 }
 
 nav ul li a:hover {
-  color: var(--highlight-color);
+  color: var(--link-hover-color);
+  border-bottom: 2px solid var(--link-hover-color);
 }
 
 /* Main Content */
 main {
-  padding: 2rem;
+  padding: 3rem 2rem;
   margin-bottom: 60px;
 }
 
+/* Episode Cards */
 .episode {
   background-color: var(--card-bg-color);
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
-  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.episode:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .episode h2 {
+  font-size: 1.6rem;
+  color: var(--header-bg-color);
   margin-top: 0;
+  font-weight: bold;
 }
 
 /* Audio Players */
 audio {
   width: 100%;
-  transition: transform 0.2s ease-in-out;
+  margin-top: 1rem;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  transition: transform 0.3s ease-in-out;
 }
 
 audio:hover {
-  transform: scale(1.02); /* Slightly enlarges on hover */
+  transform: scale(1.05); /* Slightly enlarges on hover */
 }
 
 /* Buttons */
 button {
-  background-color: var(--header-bg-color);
+  background-color: var(--button-bg-color);
   color: #fff;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background-color: var(--highlight-color);
-  color: var(--header-bg-color);
+  transform: scale(1.05);
 }
 
 /* Footer */
@@ -114,6 +144,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
@@ -133,10 +164,35 @@ footer a:hover {
   }
 
   .episode {
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   footer {
     font-size: 0.9rem;
   }
+
+  header {
+    padding: 1.5rem 0;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+header, footer, .episode {
+  animation: slideIn 0.6s ease-out;
 }

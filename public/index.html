@@ -5,212 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Le Citoyen Numérique</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Base Styles */
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #121212;
-      color: #fff;
-    }
-
-    header {
-      background: linear-gradient(90deg, #ff6347, #1e90ff);
-      padding: 20px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #fff;
-      margin: 0;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    header nav {
-      margin-top: 10px;
-    }
-
-    header nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 20px;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    header nav a:hover {
-      color: #ff6347;
-      border-bottom: 2px solid #ff6347;
-      transition: all 0.3s ease;
-    }
-
-    section {
-      padding: 50px;
-      display: none;
-    }
-
-    section.active {
-      display: block;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .episode {
-      background-color: #333;
-      margin-bottom: 30px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .episode:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .episode h3 {
-      font-size: 1.8rem;
-      color: #ff6347;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-    }
-
-    .episode audio {
-      width: 100%;
-      border-radius: 5px;
-    }
-
-    .episode p {
-      font-size: 1rem;
-      color: #ddd;
-      margin-top: 10px;
-    }
-
-    footer {
-      background-color: #222;
-      text-align: center;
-      padding: 15px;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-      color: #aaa;
-    }
-
-    /* Smooth Fade-In Animation */
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    
-    /* Scroll Prevention */
-    html, body {
-      overflow-x: hidden;
-      height: 100%;
-    }
-
-    section {
-      height: 100vh;
-      overflow-y: auto;
-    }
-
-    /* Transition for links */
-    header nav a {
-      transition: color 0.3s, border-bottom 0.3s;
-    }
-
-  </style>
 </head>
 <body>
-
   <header>
     <h1>Le Citoyen Numérique</h1>
     <nav>
-      <a href="#episode1" onclick="showSection('episode1')">Épisode 1</a>
-      <a href="#episode2" onclick="showSection('episode2')">Épisode 2</a>
-      <a href="#episode3" onclick="showSection('episode3')">Épisode 3</a>
-      <a href="#episode4" onclick="showSection('episode4')">Épisode 4</a>
-      <a href="#episode5" onclick="showSection('episode5')">Épisode 5</a>
+      <ul>
+        <li><a href="#episodes">Épisodes</a></li>
+        <li><a href="#about">À Propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section id="episode1" class="episode-section">
-    <div class="episode active">
-      <h3>Épisode 1: Médias numériques et interconnexion</h3>
-      <audio id="audio1" controls>
-        <source src="audio/episode1.mp3" type="audio/mpeg">
-        Votre navigateur ne supporte pas l'élément audio.
-      </audio>
-      <p>Dans cet épisode, nous explorons la façon dont les médias numériques sont interconnectés et comment chaque action en ligne peut influencer un autre aspect de notre vie numérique.</p>
-    </div>
-  </section>
+  <main>
+    <!-- Episodes Section -->
+    <section id="episodes">
+      <h2>Épisodes</h2>
 
-  <section id="episode2" class="episode-section">
-    <div class="episode active">
-      <h3>Épisode 2: La sécurité en ligne</h3>
-      <audio id="audio2" controls>
-        <source src="audio/episode2.mp3" type="audio/mpeg">
-        Votre navigateur ne supporte pas l'élément audio.
-      </audio>
-      <p>Apprenez comment vous protéger des menaces en ligne et découvrez les meilleures pratiques pour sécuriser vos informations personnelles et votre activité numérique.</p>
-    </div>
-  </section>
+      <!-- Episode 1 -->
+      <div class="episode">
+        <h3>Épisode 1: Médias numériques et interconnexion</h3>
+        <p>Dans cet épisode, nous explorons le concept de la connectivité numérique et son impact sur notre vie quotidienne. Découvrez comment la technologie interconnecte nos appareils et influence la société moderne.</p>
+        <audio id="audio1" controls>
+          <source src="audio/episode1.mp3" type="audio/mpeg">
+          Votre navigateur ne supporte pas l'élément audio.
+        </audio>
+      </div>
 
-  <section id="episode3" class="episode-section">
-    <div class="episode active">
-      <h3>Épisode 3: Identité numérique</h3>
-      <audio id="audio3" controls>
-        <source src="audio/episode3.mp3" type="audio/mpeg">
-        Votre navigateur ne supporte pas l'élément audio.
-      </audio>
-      <p>Dans cet épisode, nous abordons l'importance de gérer votre identité numérique et les conséquences de la mauvaise gestion de vos informations personnelles en ligne.</p>
-    </div>
-  </section>
+      <!-- Episode 2 -->
+      <div class="episode">
+        <h3>Épisode 2: La sécurité en ligne</h3>
+        <p>La sécurité en ligne est plus importante que jamais. Cet épisode discute des menaces numériques courantes et des mesures à prendre pour protéger vos données et votre identité en ligne.</p>
+        <audio id="audio2" controls>
+          <source src="audio/episode2.mp3" type="audio/mpeg">
+          Votre navigateur ne supporte pas l'élément audio.
+        </audio>
+      </div>
 
-  <section id="episode4" class="episode-section">
-    <div class="episode active">
-      <h3>Épisode 4: Vie privée et données</h3>
-      <audio id="audio4" controls>
-        <source src="audio/episode4.mp3" type="audio/mpeg">
-        Votre navigateur ne supporte pas l'élément audio.
-      </audio>
-      <p>Écoutez ce que vous devez savoir sur la gestion de votre vie privée en ligne, comment vos données sont utilisées et ce que vous pouvez faire pour contrôler votre vie privée numérique.</p>
-    </div>
-  </section>
+      <!-- Episode 3 -->
+      <div class="episode">
+        <h3>Épisode 3: Identité numérique</h3>
+        <p>Dans cet épisode, nous examinons l'importance de l'identité numérique et la manière dont elle est construite à travers nos interactions en ligne. Apprenez à gérer et protéger votre réputation numérique.</p>
+        <audio id="audio3" controls>
+          <source src="audio/episode3.mp3" type="audio/mpeg">
+          Votre navigateur ne supporte pas l'élément audio.
+        </audio>
+      </div>
 
-  <section id="episode5" class="episode-section">
-    <div class="episode active">
-      <h3>Épisode 5: Éthique et réseaux sociaux</h3>
-      <audio id="audio5" controls>
-        <source src="audio/episode5.mp3" type="audio/mpeg">
-        Votre navigateur ne supporte pas l'élément audio.
-      </audio>
-      <p>Dans cet épisode, nous explorons les dilemmes éthiques rencontrés sur les réseaux sociaux, y compris la gestion de l'intimité et la responsabilité individuelle dans le partage en ligne.</p>
-    </div>
-  </section>
+      <!-- Episode 4 -->
+      <div class="episode">
+        <h3>Épisode 4: Vie privée et données</h3>
+        <p>La gestion de la vie privée et des données personnelles est cruciale. Découvrez les enjeux liés à la collecte de données et les moyens de protéger votre vie privée en ligne.</p>
+        <audio id="audio4" controls>
+          <source src="audio/episode4.mp3" type="audio/mpeg">
+          Votre navigateur ne supporte pas l'élément audio.
+        </audio>
+      </div>
+
+      <!-- Episode 5 -->
+      <div class="episode">
+        <h3>Épisode 5: Éthique et réseaux sociaux</h3>
+        <p>Les réseaux sociaux posent des défis éthiques importants. Cet épisode explore les questions éthiques entourant la collecte de données, l'influence et la responsabilité des plateformes sociales.</p>
+        <audio id="audio5" controls>
+          <source src="audio/episode5.mp3" type="audio/mpeg">
+          Votre navigateur ne supporte pas l'élément audio.
+        </audio>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+      <h2>À Propos</h2>
+      <p>Le Citoyen Numérique est un podcast dédié à la sensibilisation à la citoyenneté numérique. Chaque épisode aborde un aspect clé de la manière dont les technologies numériques affectent notre vie quotidienne, nos interactions sociales et notre sécurité en ligne.</p>
+      <p>Nous avons pour objectif d’éduquer et d’informer les auditeurs sur la manière de naviguer dans le monde numérique de manière sécurisée et éthique, tout en promouvant la compréhension des défis liés à la protection de la vie privée et à l'éthique des technologies.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter via email à <a href="mailto:contact@citoyennumerique.com">contact@citoyennumerique.com</a>.</p>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Le Citoyen Numérique</p>
+    <p>&copy; 2025 Le Citoyen Numérique. Tous droits réservés.</p>
   </footer>
-
-  <script>
-    // Function to switch between sections
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll('.episode-section');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-
-      const activeSection = document.getElementById(sectionId);
-      activeSection.classList.add('active');
-    }
-  </script>
-
 </body>
 </html>
