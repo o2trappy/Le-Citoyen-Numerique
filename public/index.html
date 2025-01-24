@@ -20,88 +20,48 @@
         <!-- About Section -->
         <section id="about" class="section">
             <h2>À propos de nous</h2>
-            <p><strong>Oliver England</strong> : Spécialiste des médias numériques, passionné par la technologie et les plateformes en ligne. Oliver vit dans un monde de plus en plus connecté et utilise son expertise pour sensibiliser les jeunes adultes aux enjeux du numérique.</p>
-            <p><strong>Cohen Font</strong> : Experte en sécurité en ligne, elle se consacre à la protection des données et des bonnes pratiques numériques. Cohen croit fermement que la sécurité numérique est essentielle pour naviguer sereinement dans le monde virtuel.</p>
-            <p>Bienvenue dans <strong>"Le Citoyen Numérique"</strong>, un podcast créé par Oliver et Cohen. Notre mission est de sensibiliser les jeunes adultes (13-25 ans) aux dangers et aux opportunités du numérique. Nous voulons aider chacun à comprendre comment protéger sa vie numérique, tout en étant conscient des impacts que nos actions en ligne peuvent avoir sur le monde autour de nous.</p>
+            <p><strong>Oliver England</strong> : spécialiste des médias numériques, passionné par les technologies et les plateformes en ligne. Je m'efforce de sensibiliser les jeunes adultes aux dangers et opportunités du numérique.</p>
+            <p><strong>Cohen Font</strong> : experte en sécurité en ligne, spécialisée dans la protection des données et les bonnes pratiques numériques. Avec une expertise en cybersécurité, elle aide à protéger les utilisateurs contre les menaces du web.</p>
+            <p>Bienvenue dans "Le Citoyen Numérique", un podcast dédié à la littératie numérique et à la sécurité en ligne. Nous voulons aider les jeunes adultes (13-25 ans) à naviguer en toute sécurité dans un monde où l'on passe de plus en plus de temps en ligne. Nous sommes une génération connectée, mais cette hyperconnexion présente aussi de nombreux dangers. Notre mission est de vous fournir des conseils pratiques pour éviter les pièges et rendre Internet plus sûr pour vous.</p>
         </section>
 
         <!-- Episodes Section -->
         <section id="listen" class="section">
             <h2>Épisodes</h2>
-
-            <!-- Episode 1 -->
             <div class="episode">
                 <h3>Épisode 1 : Les médias numériques sont en réseau</h3>
                 <audio controls>
                     <source src="episode1.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
-                <div class="controls">
-                    <input type="range" id="volume1" min="0" max="1" step="0.1" value="1">
-                    <label for="volume1">Volume</label>
-                    <input type="range" id="speed1" min="0.5" max="2" step="0.1" value="1">
-                    <label for="speed1">Vitesse</label>
-                </div>
             </div>
-
-            <!-- Episode 2 -->
             <div class="episode">
                 <h3>Épisode 2 : Les médias numériques ont des auditoires imprévus</h3>
                 <audio controls>
                     <source src="episode2.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
-                <div class="controls">
-                    <input type="range" id="volume2" min="0" max="1" step="0.1" value="1">
-                    <label for="volume2">Volume</label>
-                    <input type="range" id="speed2" min="0.5" max="2" step="0.1" value="1">
-                    <label for="speed2">Vitesse</label>
-                </div>
             </div>
-
-            <!-- Episode 3 -->
             <div class="episode">
                 <h3>Épisode 3 : Nos interactions numériques peuvent avoir un réel impact</h3>
                 <audio controls>
                     <source src="episode3.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
-                <div class="controls">
-                    <input type="range" id="volume3" min="0" max="1" step="0.1" value="1">
-                    <label for="volume3">Volume</label>
-                    <input type="range" id="speed3" min="0.5" max="2" step="0.1" value="1">
-                    <label for="speed3">Vitesse</label>
-                </div>
             </div>
-
-            <!-- Episode 4 -->
             <div class="episode">
                 <h3>Épisode 4 : Les médias numériques sont partageables et continus</h3>
                 <audio controls>
                     <source src="episode4.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
-                <div class="controls">
-                    <input type="range" id="volume4" min="0" max="1" step="0.1" value="1">
-                    <label for="volume4">Volume</label>
-                    <input type="range" id="speed4" min="0.5" max="2" step="0.1" value="1">
-                    <label for="speed4">Vitesse</label>
-                </div>
             </div>
-
-            <!-- Episode 5 -->
             <div class="episode">
                 <h3>Épisode 5 : Les Arnaques Crypto et Comment les Combattre</h3>
                 <audio controls>
                     <source src="episode5.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
-                <div class="controls">
-                    <input type="range" id="volume5" min="0" max="1" step="0.1" value="1">
-                    <label for="volume5">Volume</label>
-                    <input type="range" id="speed5" min="0.5" max="2" step="0.1" value="1">
-                    <label for="speed5">Vitesse</label>
-                </div>
             </div>
         </section>
 
@@ -128,32 +88,9 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Le Citoyen Numérique. Tous droits réservés.</p>
+        <p>&copy; 2025 Le Citoyen Numérique | Tous droits réservés</p>
     </footer>
 
-    <script>
-        // Volume and Speed control
-        const controls = [
-            {volume: "volume1", speed: "speed1", audioId: 1},
-            {volume: "volume2", speed: "speed2", audioId: 2},
-            {volume: "volume3", speed: "speed3", audioId: 3},
-            {volume: "volume4", speed: "speed4", audioId: 4},
-            {volume: "volume5", speed: "speed5", audioId: 5}
-        ];
-
-        controls.forEach(control => {
-            const audio = document.querySelector(`audio:nth-of-type(${control.audioId})`);
-            const volumeControl = document.getElementById(control.volume);
-            const speedControl = document.getElementById(control.speed);
-
-            volumeControl.addEventListener('input', () => {
-                audio.volume = volumeControl.value;
-            });
-
-            speedControl.addEventListener('input', () => {
-                audio.playbackRate = speedControl.value;
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
