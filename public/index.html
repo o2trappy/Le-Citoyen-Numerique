@@ -1,68 +1,251 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Le Citoyen Numérique</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Citoyen Numérique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #0056b3;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header nav {
+            margin-top: 10px;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        .episode {
+            margin-bottom: 15px;
+        }
+        .episode h3 {
+            margin-bottom: 5px;
+        }
+        .audio-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .audio-controls label {
+            margin-right: 10px;
+        }
+        .play-button {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 10px 15px;
+            background: #0056b3;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .play-button:hover {
+            background: #003f8c;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Le Citoyen Numérique</h1>
-  </header>
+    <header>
+        <h1>Le Citoyen Numérique</h1>
+        <nav>
+            <a href="#about">À propos</a>
+            <a href="#listen">Épisodes</a>
+            <a href="#tips">Conseils et Infos</a>
+        </nav>
+    </header>
 
-  <main>
-    <section>
-      <h2>Épisodes</h2>
-      <!-- Episode 1 -->
-      <div class="episode">
-        <h3>Épisode 1: Médias numériques et interconnexion</h3>
-        <audio id="audio1" controls>
-          <source src="audio/episode1.mp3" type="audio/mpeg">
-          Votre navigateur ne supporte pas l'élément audio.
-        </audio>
-      </div>
+    <div class="container">
+        <!-- Welcome Section -->
+        <section id="about" class="section">
+            <h2>À propos de nous</h2>
+            <p><strong>Oliver</strong> : spécialiste des médias numériques, passionné par les technologies et les plateformes en ligne.</p>
+            <p><strong>Cohen</strong> : experte en sécurité en ligne, spécialisée dans la protection des données et les bonnes pratiques numériques.</p>
+            <p>Bienvenue dans "Le Citoyen Numérique", un podcast dédié à la littératie numérique et à la sécurité en ligne. Notre mission est de sensibiliser les jeunes adultes (13-25 ans) aux dangers et aux opportunités des médias numériques, tout en partageant des conseils pratiques pour naviguer en toute sécurité dans le monde numérique.</p>
+        </section>
 
-      <!-- Episode 2 -->
-      <div class="episode">
-        <h3>Épisode 2: La sécurité en ligne</h3>
-        <audio id="audio2" controls>
-          <source src="audio/episode2.mp3" type="audio/mpeg">
-          Votre navigateur ne supporte pas l'élément audio.
-        </audio>
-      </div>
+        <!-- Episodes Section -->
+        <section id="listen" class="section">
+            <h2>Épisodes</h2>
 
-      <!-- Episode 3 -->
-      <div class="episode">
-        <h3>Épisode 3: Identité numérique</h3>
-        <audio id="audio3" controls>
-          <source src="audio/episode3.mp3" type="audio/mpeg">
-          Votre navigateur ne supporte pas l'élément audio.
-        </audio>
-      </div>
+            <div class="episode">
+                <h3>Épisode 1 : Les médias numériques sont en réseau</h3>
+                <p>Apprenez comment chaque action en ligne peut être vue et partagée par des publics inattendus.</p>
+                <div class="audio-container">
+                    <audio id="episode1" controls>
+                        <source src="audio/episode1.mp3" type="audio/mp3">
+                        Votre navigateur ne supporte pas l'élément audio.
+                    </audio>
+                    <div class="audio-controls">
+                        <label for="volume1">Volume:</label>
+                        <input id="volume1" type="range" min="0" max="1" step="0.01" value="1">
+                        <label for="speed1">Vitesse:</label>
+                        <select id="speed1">
+                            <option value="0.5">0.5x</option>
+                            <option value="1" selected>1x</option>
+                            <option value="1.5">1.5x</option>
+                            <option value="2">2x</option>
+                        </select>
+                        <span>Temps: <span id="time1">00:00</span></span>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Episode 4 -->
-      <div class="episode">
-        <h3>Épisode 4: Vie privée et données</h3>
-        <audio id="audio4" controls>
-          <source src="audio/episode4.mp3" type="audio/mpeg">
-          Votre navigateur ne supporte pas l'élément audio.
-        </audio>
-      </div>
+            <div class="episode">
+                <h3>Épisode 2 : Les médias numériques ont des auditoires imprévus</h3>
+                <p>Découvrez comment vos publications peuvent atteindre un public bien plus large que prévu.</p>
+                <div class="audio-container">
+                    <audio id="episode2" controls>
+                        <source src="audio/episode2.mp3" type="audio/mp3">
+                        Votre navigateur ne supporte pas l'élément audio.
+                    </audio>
+                    <div class="audio-controls">
+                        <label for="volume2">Volume:</label>
+                        <input id="volume2" type="range" min="0" max="1" step="0.01" value="1">
+                        <label for="speed2">Vitesse:</label>
+                        <select id="speed2">
+                            <option value="0.5">0.5x</option>
+                            <option value="1" selected>1x</option>
+                            <option value="1.5">1.5x</option>
+                            <option value="2">2x</option>
+                        </select>
+                        <span>Temps: <span id="time2">00:00</span></span>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Episode 5 -->
-      <div class="episode">
-        <h3>Épisode 5: Éthique et réseaux sociaux</h3>
-        <audio id="audio5" controls>
-          <source src="audio/episode5.mp3" type="audio/mpeg">
-          Votre navigateur ne supporte pas l'élément audio.
-        </audio>
-      </div>
-    </section>
-  </main>
+            <div class="episode">
+                <h3>Épisode 3 : Nos interactions numériques peuvent avoir un réel impact</h3>
+                <p>Explorez l'impact positif ou négatif de nos actions en ligne sur les autres.</p>
+                <div class="audio-container">
+                    <audio id="episode3" controls>
+                        <source src="audio/episode3.mp3" type="audio/mp3">
+                        Votre navigateur ne supporte pas l'élément audio.
+                    </audio>
+                    <div class="audio-controls">
+                        <label for="volume3">Volume:</label>
+                        <input id="volume3" type="range" min="0" max="1" step="0.01" value="1">
+                        <label for="speed3">Vitesse:</label>
+                        <select id="speed3">
+                            <option value="0.5">0.5x</option>
+                            <option value="1" selected>1x</option>
+                            <option value="1.5">1.5x</option>
+                            <option value="2">2x</option>
+                        </select>
+                        <span>Temps: <span id="time3">00:00</span></span>
+                    </div>
+                </div>
+            </div>
 
-  <footer>
-    <p>&copy; 2025 Le Citoyen Numérique</p>
-  </footer>
+            <!-- Repeat this block for the remaining episodes -->
+        </section>
+
+        <!-- Tips and Info Section -->
+        <section id="tips" class="section">
+            <h2>Conseils et Informations</h2>
+            <p><strong>Les cinq concepts clés :</strong></p>
+            <ul>
+                <li>Les médias numériques sont en réseau.</li>
+                <li>Les médias numériques ont des auditoires imprévus.</li>
+                <li>Nos interactions dans les médias numériques peuvent avoir un réel impact sur les autres.</li>
+                <li>Les médias numériques sont partageables et continus.</li>
+                <li>Notre expérience des médias est façonnée par les outils dont nous nous servons.</li>
+            </ul>
+            <p>Quelques conseils pour rester en sécurité en ligne :</p>
+            <ul>
+                <li>Vérifiez vos paramètres de confidentialité régulièrement.</li>
+                <li>Évitez de partager des informations personnelles sensibles.</li>
+                <li>Réfléchissez avant de publier : est-ce que cela pourrait être mal interprété ?</li>
+                <li>Protégez vos mots de passe et utilisez une authentification à deux facteurs.</li>
+                <li>Méfiez-vous des emails ou messages suspects qui demandent des informations confidentielles.</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        function updateTime(player, timeElement) {
+            const minutes = Math.floor(player.currentTime / 60);
+            const seconds = Math.floor(player.currentTime % 60);
+            timeElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }
+
+        // Episode 1 controls
+        const episode1 = document.getElementById('episode1');
+        const volume1 = document.getElementById('volume1');
+        const speed1 = document.getElementById('speed1');
+        const time1 = document.getElementById('time1');
+
+        episode1.volume = volume1.value;
+
+        volume1.addEventListener('input', () => {
+            episode1.volume = volume1.value;
+        });
+
+        speed1.addEventListener('change', () => {
+            episode1.playbackRate = parseFloat(speed1.value);
+        });
+
+        episode1.addEventListener('timeupdate', () => {
+            updateTime(episode1, time1);
+        });
+
+        // Episode 2 controls (same as Episode 1)
+        const episode2 = document.getElementById('episode2');
+        const volume2 = document.getElementById('volume2');
+        const speed2 = document.getElementById('speed2');
+        const time2 = document.getElementById('time2');
+
+        episode2.volume = volume2.value;
+
+        volume2.addEventListener('input', () => {
+            episode2.volume = volume2.value;
+        });
+
+        speed2.addEventListener('change', () => {
+            episode2.playbackRate = parseFloat(speed2.value);
+        });
+
+        episode2.addEventListener('timeupdate', () => {
+            updateTime(episode2, time2);
+        });
+
+        // Repeat similar script for other episodes
+    </script>
 </body>
 </html>
