@@ -1,22 +1,22 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.8;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-  padding-bottom: 80px; /* Ensure content doesn't overlap the footer */
+  background-color: #f9f9f9;
+  color: #444;
 }
 
-/* Root Variables for Colors */
+/* Root Variables */
 :root {
-  --main-bg-color: #f4f4f4;
-  --header-bg-color: #333;
-  --text-color: #333;
+  --main-bg-color: #f9f9f9;
+  --header-bg-color: #1e1e2f;
+  --text-color: #444;
   --highlight-color: #ffcc00;
-  --card-bg-color: #fff;
-  --footer-bg-color: #333;
+  --card-bg-color: #ffffff;
+  --card-shadow-color: rgba(0, 0, 0, 0.1);
+  --footer-bg-color: #1e1e2f;
 }
 
 /* Header */
@@ -24,85 +24,95 @@ header {
   background-color: var(--header-bg-color);
   color: #fff;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 6px var(--card-shadow-color);
 }
 
-header a {
-  color: #fff;
-  text-decoration: none;
-}
-
-header a:hover {
-  color: var(--highlight-color);
-  text-decoration: underline;
-}
-
-/* Navigation Bar */
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  background-color: #444;
+header h1 {
+  font-size: 2.5rem;
   margin: 0;
+  letter-spacing: 1px;
 }
 
-nav ul li {
-  margin: 0 1rem;
+header nav {
+  margin-top: 1rem;
 }
 
-nav ul li a {
+header nav a {
   color: #fff;
   text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.1rem;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+header nav a:hover {
   color: var(--highlight-color);
 }
 
-/* Main Content */
-main {
-  padding: 2rem;
-  margin-bottom: 60px;
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
-.episode {
+/* Section Styles */
+.section {
   background-color: var(--card-bg-color);
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--card-shadow-color);
+}
+
+.section h2 {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--highlight-color);
+  padding-bottom: 0.5rem;
+}
+
+/* Episode Cards */
+.episode {
+  display: flex;
+  align-items: center;
+  background-color: var(--card-bg-color);
+  margin-bottom: 1.5rem;
   padding: 1rem;
-}
-
-.episode h2 {
-  margin-top: 0;
-}
-
-/* Audio Players */
-audio {
-  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--card-shadow-color);
   transition: transform 0.2s ease-in-out;
 }
 
-audio:hover {
-  transform: scale(1.02); /* Slightly enlarges on hover */
+.episode:hover {
+  transform: scale(1.02);
 }
 
-/* Buttons */
-button {
-  background-color: var(--header-bg-color);
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
+.episode h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.episode audio {
+  margin-left: auto;
+  width: 60%;
+}
+
+/* Tips Section */
+.section ul {
+  list-style: disc;
+  margin-left: 2rem;
+  padding-left: 1rem;
+}
+
+.section ul li {
+  margin-bottom: 0.8rem;
   font-size: 1rem;
-}
-
-button:hover {
-  background-color: var(--highlight-color);
-  color: var(--header-bg-color);
+  color: var(--text-color);
 }
 
 /* Footer */
@@ -114,29 +124,49 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  box-shadow: 0 -4px 6px var(--card-shadow-color);
+}
+
+footer p {
+  margin: 0.5rem 0;
 }
 
 footer a {
-  color: #fff;
+  color: var(--highlight-color);
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 footer a:hover {
-  color: var(--highlight-color);
-  text-decoration: underline;
+  color: #fff;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-  main {
-    padding: 1rem;
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2rem;
+  }
+
+  header nav a {
+      font-size: 1rem;
+  }
+
+  .section {
+      padding: 1.5rem;
   }
 
   .episode {
-    padding: 0.5rem;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .episode audio {
+      width: 100%;
+      margin-top: 1rem;
   }
 
   footer {
-    font-size: 0.9rem;
+      font-size: 0.9rem;
   }
 }
