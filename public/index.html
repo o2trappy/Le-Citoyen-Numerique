@@ -4,82 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Citoyen Numérique</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #0056b3;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        header nav {
-            margin-top: 10px;
-        }
-        header nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-        header nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        .section {
-            margin-bottom: 40px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .section h2 {
-            color: #0056b3;
-            margin-bottom: 20px;
-        }
-        .episode {
-            margin-bottom: 15px;
-        }
-        .episode h3 {
-            margin-bottom: 5px;
-        }
-        .play-button {
-            display: inline-block;
-            margin-top: 5px;
-            padding: 10px 15px;
-            background: #0056b3;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .play-button:hover {
-            background: #003f8c;
-        }
-        audio {
-            width: 100%;
-            margin-top: 10px;
-        }
-        .controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-        }
-        .controls input[type="range"] {
-            width: 60%;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -95,14 +20,16 @@
         <!-- About Section -->
         <section id="about" class="section">
             <h2>À propos de nous</h2>
-            <p><strong>Oliver</strong> : spécialiste des médias numériques, passionné par les technologies et les plateformes en ligne.</p>
-            <p><strong>Cohen</strong> : experte en sécurité en ligne, spécialisée dans la protection des données et les bonnes pratiques numériques.</p>
-            <p>Bienvenue dans "Le Citoyen Numérique", un podcast dédié à la littératie numérique et à la sécurité en ligne. Notre mission est de sensibiliser les jeunes adultes (13-25 ans) aux dangers et aux opportunités des médias numériques, tout en partageant des conseils pratiques pour naviguer en toute sécurité dans le monde numérique.</p>
+            <p><strong>Oliver England</strong> : Spécialiste des médias numériques, passionné par la technologie et les plateformes en ligne. Oliver vit dans un monde de plus en plus connecté et utilise son expertise pour sensibiliser les jeunes adultes aux enjeux du numérique.</p>
+            <p><strong>Cohen Font</strong> : Experte en sécurité en ligne, elle se consacre à la protection des données et des bonnes pratiques numériques. Cohen croit fermement que la sécurité numérique est essentielle pour naviguer sereinement dans le monde virtuel.</p>
+            <p>Bienvenue dans <strong>"Le Citoyen Numérique"</strong>, un podcast créé par Oliver et Cohen. Notre mission est de sensibiliser les jeunes adultes (13-25 ans) aux dangers et aux opportunités du numérique. Nous voulons aider chacun à comprendre comment protéger sa vie numérique, tout en étant conscient des impacts que nos actions en ligne peuvent avoir sur le monde autour de nous.</p>
         </section>
 
         <!-- Episodes Section -->
         <section id="listen" class="section">
             <h2>Épisodes</h2>
+
+            <!-- Episode 1 -->
             <div class="episode">
                 <h3>Épisode 1 : Les médias numériques sont en réseau</h3>
                 <audio controls>
@@ -116,6 +43,8 @@
                     <label for="speed1">Vitesse</label>
                 </div>
             </div>
+
+            <!-- Episode 2 -->
             <div class="episode">
                 <h3>Épisode 2 : Les médias numériques ont des auditoires imprévus</h3>
                 <audio controls>
@@ -129,6 +58,8 @@
                     <label for="speed2">Vitesse</label>
                 </div>
             </div>
+
+            <!-- Episode 3 -->
             <div class="episode">
                 <h3>Épisode 3 : Nos interactions numériques peuvent avoir un réel impact</h3>
                 <audio controls>
@@ -142,6 +73,8 @@
                     <label for="speed3">Vitesse</label>
                 </div>
             </div>
+
+            <!-- Episode 4 -->
             <div class="episode">
                 <h3>Épisode 4 : Les médias numériques sont partageables et continus</h3>
                 <audio controls>
@@ -155,6 +88,8 @@
                     <label for="speed4">Vitesse</label>
                 </div>
             </div>
+
+            <!-- Episode 5 -->
             <div class="episode">
                 <h3>Épisode 5 : Les Arnaques Crypto et Comment les Combattre</h3>
                 <audio controls>
@@ -191,6 +126,10 @@
             </ul>
         </section>
     </div>
+
+    <footer>
+        <p>&copy; 2025 Le Citoyen Numérique. Tous droits réservés.</p>
+    </footer>
 
     <script>
         // Volume and Speed control
