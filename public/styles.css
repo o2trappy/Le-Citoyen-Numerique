@@ -1,82 +1,73 @@
 /* General Styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f7f6;
-  color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
+  background-color: #2f2f2f;
+  color: #fff;
 }
 
-/* Root Variables for Colors */
-:root {
-  --main-bg-color: #f4f7f6;
-  --header-bg-color: #007BFF;
-  --text-color: #333;
-  --highlight-color: #ffcc00;
-  --card-bg-color: #ffffff;
-  --footer-bg-color: #007BFF;
-  --nav-link-color: #ffffff;
-}
-
-/* Header */
 header {
-  background-color: var(--header-bg-color);
-  color: var(--nav-link-color);
+  background-color: #333;
+  color: #fff;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
-header h1 {
-  font-size: 2.5rem;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
+header nav ul {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+  background-color: #444;
+  margin-top: 10px;
 }
 
-nav ul li {
-  margin: 0 1.5rem;
+header nav ul li {
+  margin: 0 1rem;
 }
 
-nav ul li a {
-  color: var(--nav-link-color);
+header nav ul li a {
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2rem;
 }
 
-nav ul li a:hover {
-  color: var(--highlight-color);
+header nav ul li a:hover {
+  color: #ffcc00;
 }
 
-/* Main Content */
+/* Main Section */
 main {
-  padding: 3rem 1.5rem;
-}
-
-section {
-  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: #2f2f2f;
 }
 
 h2 {
-  color: var(--header-bg-color);
-  margin-bottom: 1.5rem;
+  color: #ffcc00;
 }
 
 .episode {
-  background-color: var(--card-bg-color);
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-  transition: all 0.3s ease;
+  background-color: #444;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.episode:hover {
-  transform: translate
-::contentReference[oaicite:0]{index=0}
- 
+audio {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Tips Section */
+ul {
+  list-style-type: disc;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
