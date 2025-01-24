@@ -1,7 +1,7 @@
 import express from "express"
 import { fileURLToPath } from "url"
 import { dirname, join } from "path"
-
+const PING_URL = "https://le-citoyen-numerique.onrender.com/health";
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
@@ -22,8 +22,8 @@ app.listen(PORT, () => {
 
 // Auto-ping function
 const pingServer = () => {
-  fetch(`http://localhost:${PORT}/health`).catch((error) => console.error("Error pinging server:", error))
-}
+  fetch(PING_URL).catch((error) => console.error("Error pinging server:", error));
+};
 
 // Ping every 14 minutes
 setInterval(pingServer, 14 * 60 * 1000)
