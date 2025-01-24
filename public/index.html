@@ -105,68 +105,73 @@
             <h2>Épisodes</h2>
             <div class="episode">
                 <h3>Épisode 1 : Les médias numériques sont en réseau</h3>
-                <audio controls>
+                <audio id="audio1" controls>
                     <source src="episode1.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
                 <div class="controls">
-                    <input type="range" id="volume1" min="0" max="1" step="0.1" value="1">
+                    <input type="range" id="volume1" min="0" max="1" step="0.1" value="1" onchange="document.getElementById('audio1').volume = this.value">
                     <label for="volume1">Volume</label>
-                    <input type="range" id="speed1" min="0.5" max="2" step="0.1" value="1">
+                    <input type="range" id="speed1" min="0.5" max="2" step="0.1" value="1" onchange="document.getElementById('audio1').playbackRate = this.value">
                     <label for="speed1">Vitesse</label>
                 </div>
+                <a href="#" class="play-button" onclick="document.getElementById('audio1').play()">Écouter</a>
             </div>
             <div class="episode">
                 <h3>Épisode 2 : Les médias numériques ont des auditoires imprévus</h3>
-                <audio controls>
+                <audio id="audio2" controls>
                     <source src="episode2.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
                 <div class="controls">
-                    <input type="range" id="volume2" min="0" max="1" step="0.1" value="1">
+                    <input type="range" id="volume2" min="0" max="1" step="0.1" value="1" onchange="document.getElementById('audio2').volume = this.value">
                     <label for="volume2">Volume</label>
-                    <input type="range" id="speed2" min="0.5" max="2" step="0.1" value="1">
+                    <input type="range" id="speed2" min="0.5" max="2" step="0.1" value="1" onchange="document.getElementById('audio2').playbackRate = this.value">
                     <label for="speed2">Vitesse</label>
                 </div>
+                <a href="#" class="play-button" onclick="document.getElementById('audio2').play()">Écouter</a>
             </div>
             <div class="episode">
                 <h3>Épisode 3 : Nos interactions numériques peuvent avoir un réel impact</h3>
-                <audio controls>
+                <audio id="audio3" controls>
                     <source src="episode3.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
                 <div class="controls">
-                    <input type="range" id="volume3" min="0" max="1" step="0.1" value="1">
+                    <input type="range" id="volume3" min="0" max="1" step="0.1" value="1" onchange="document.getElementById('audio3').volume = this.value">
                     <label for="volume3">Volume</label>
-                    <input type="range" id="speed3" min="0.5" max="2" step="0.1" value="1">
+                    <input type="range" id="speed3" min="0.5" max="2" step="0.1" value="1" onchange="document.getElementById('audio3').playbackRate = this.value">
                     <label for="speed3">Vitesse</label>
                 </div>
+                <a href="#" class="play-button" onclick="document.getElementById('audio3').play()">Écouter</a>
             </div>
             <div class="episode">
                 <h3>Épisode 4 : Les médias numériques sont partageables et continus</h3>
-                <audio controls>
+                <audio id="audio4" controls>
                     <source src="episode4.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
                 <div class="controls">
-                    <input type="range" id="volume4" min="0" max="1" step="0.1" value="1">
+                    <input type="range" id="volume4" min="0" max="1" step="0.1" value="1" onchange="document.getElementById('audio4').volume = this.value">
                     <label for="volume4">Volume</label>
-                    <input type="range" id="speed4" min="0.5" max="2" step="0.1" value="1">
+                    <input type="range" id="speed4" min="0.5" max="2" step="0.1" value="1" onchange="document.getElementById('audio4').playbackRate = this.value">
                     <label for="speed4">Vitesse</label>
                 </div>
+                <a href="#" class="play-button" onclick="document.getElementById('audio4').play()">Écouter</a>
             </div>
             <div class="episode">
                 <h3>Épisode 5 : Les Arnaques Crypto et Comment les Combattre</h3>
-                <audio controls>
+                <audio id="audio5" controls>
                     <source src="episode5.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
                 <div class="controls">
-                    <input type="range" id="volume5" min="0" max="1" step="0.1" value="1">
+                    <input type="range" id="volume5" min="0" max="1" step="0.1" value="1" onchange="document.getElementById('audio5').volume = this.value">
                     <label for="volume5">Volume</label>
-                    <input type="range" id="speed5" min="0.5" max="2" step="0.1" value="1">
+                    <input type="range" id="speed5" min="0.5" max="2" step="0.1" value="1" onchange="document.getElementById('audio5').playbackRate = this.value">
                     <label for="speed5">Vitesse</label>
                 </div>
+                <a href="#" class="play-button" onclick="document.getElementById('audio5').play()">Écouter</a>
             </div>
         </section>
 
@@ -175,12 +180,4 @@
             <h2>Conseils et Informations</h2>
             <p><strong>Les cinq concepts clés :</strong></p>
             <ul>
-                <li><strong>Les médias numériques sont en réseau :</strong> Chaque publication, image ou vidéo partagée en ligne peut se propager à travers des réseaux interconnectés. Exemple : Une photo partagée sur Instagram peut rapidement se retrouver sur d'autres plateformes, avec des conséquences sur la vie privée d'un individu.
-                </li>
-                <li><strong>Les médias numériques ont des auditoires imprévus :</strong> Même un post privé peut être vu par un public plus large que prévu. Exemple : Une conversation privée sur Facebook Messenger peut être capturée par une capture d'écran et partagée publiquement.
-                </li>
-                <li><strong>Nos interactions numériques peuvent avoir un réel impact sur les autres :</strong> Nos messages en ligne peuvent influencer des décisions et opinions. Exemple : Les campagnes de désinformation sur Twitter peuvent influencer des élections ou causer des paniques collectives.
-                </li>
-                <li><strong>Les médias numériques sont partageables et continus :</strong> Une fois publié, un message peut être partagé et revu indéfiniment, même après sa suppression. Exemple : Un tweet supprimé peut encore être cité ou partagé des mois plus tard dans des discussions en ligne.
-                </li>
-                <li><strong>Notre expérience des médias est façonnée par les outils dont nous nous servons :</strong> Les plateformes numériques influencent la manière dont nous accédons à l'information et interagissons. Exemple : L'algorithme de YouTube façonne les vidéos que nous voyons, souvent en fonction de nos précédentes visualisations, limitant ainsi la diversité des informations proposées.
+                <li><strong>Les médias numériques sont en réseau :</strong> Chaque publication, image ou vidéo partagée en ligne peut se propager à travers des réseaux interconnectés. Exemple : Une photo partagée sur Instagram peut rapidement se retrouver sur d'autres plateformes, avec des conséquences sur la vie
