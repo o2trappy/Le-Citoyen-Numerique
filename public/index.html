@@ -69,6 +69,7 @@
         audio {
             width: 100%;
             margin-top: 10px;
+            display: none; /* Hide the audio controls */
         }
         .controls {
             display: flex;
@@ -78,6 +79,9 @@
         }
         .controls input[type="range"] {
             width: 60%;
+        }
+        .controls label {
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -105,7 +109,7 @@
             <h2>Épisodes</h2>
             <div class="episode">
                 <h3>Épisode 1 : Les médias numériques sont en réseau</h3>
-                <audio id="audio1" controls>
+                <audio id="audio1">
                     <source src="episode1.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
@@ -119,7 +123,7 @@
             </div>
             <div class="episode">
                 <h3>Épisode 2 : Les médias numériques ont des auditoires imprévus</h3>
-                <audio id="audio2" controls>
+                <audio id="audio2">
                     <source src="episode2.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
@@ -133,7 +137,7 @@
             </div>
             <div class="episode">
                 <h3>Épisode 3 : Nos interactions numériques peuvent avoir un réel impact</h3>
-                <audio id="audio3" controls>
+                <audio id="audio3">
                     <source src="episode3.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
@@ -147,7 +151,7 @@
             </div>
             <div class="episode">
                 <h3>Épisode 4 : Les médias numériques sont partageables et continus</h3>
-                <audio id="audio4" controls>
+                <audio id="audio4">
                     <source src="episode4.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
@@ -161,7 +165,7 @@
             </div>
             <div class="episode">
                 <h3>Épisode 5 : Les Arnaques Crypto et Comment les Combattre</h3>
-                <audio id="audio5" controls>
+                <audio id="audio5">
                     <source src="episode5.mp3" type="audio/mp3">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
@@ -180,4 +184,15 @@
             <h2>Conseils et Informations</h2>
             <p><strong>Les cinq concepts clés :</strong></p>
             <ul>
-                <li><strong>Les médias numériques sont en réseau :</strong> Chaque publication, image ou vidéo partagée en ligne peut se propager à travers des réseaux interconnectés. Exemple : Une photo partagée sur Instagram peut rapidement se retrouver sur d'autres plateformes, avec des conséquences sur la vie
+                <li><strong>Les médias numériques sont en réseau :</strong> Chaque publication, image ou vidéo partagée en ligne peut se propager à travers des réseaux interconnectés. Exemple : Une photo partagée sur Instagram peut rapidement se retrouver sur d'autres plateformes, avec des conséquences sur la vie privée.
+                </li>
+                <!-- Add other tips here -->
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Le Citoyen Numérique</p>
+    </footer>
+</body>
+</html>
